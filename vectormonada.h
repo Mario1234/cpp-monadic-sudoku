@@ -18,16 +18,17 @@ template<> struct Monada<std::vector>
 	}
 };
 
-template<typename TipoGenerico1, typename TipoGenerico2>
-auto operator>>=(const std::vector<TipoGenerico1>& entrada, const TipoGenerico2&& valorDeUnTipo)
-    -> decltype(valorDeUnTipo(entrada.front()))
+template<typename TipoGenerico1, typename TipoLambda>
+auto operator>>=(const std::vector<TipoGenerico1>& entrada, const TipoLambda&& funcionLambda)
+    -> decltype(funcionLambda(entrada.front()))
 {
-	typedef typename std::remove_const<decltype(valorDeUnTipo(entrada.front()))>::type tipoAuxiliar;
-	tipoAuxiliar salida;
+	typedef typename std::remove_const<decltype(funcionLambda(entrada.front()))>::type tipoRetornoFuncionLambda;
+	tipoRetornoFuncionLambda retornoFuncionLambda;
 	for(auto i = entrada.begin(); i != entrada.end(); ++i)
 	{
-		tipoAuxiliar actual = valorDeUnTipo(*i);
-		std::copy(actual.begin(), actual.end(), std::back_inserter(salida) );
+		tipoRetornoFuncionLambda actual = funcionLambda(*i);//actual es un vector de tamanio 1, resultado de el metodo unidad
+		retornoFuncionLambda.push_back(actual[0]);
+		//std::copy(actual.begin(), actual.end(), std::back_inserter(retornoFuncionLambda) );
 	}
-	return salida;
+	return retornoFuncionLambda;
 }
