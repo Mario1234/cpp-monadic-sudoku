@@ -18,7 +18,7 @@ EstructuraResolutora is those data structures, is the struct that represents the
 +secondone represents it by block and value (celdasPosiblesPorBloqueYValor). 
 So, following this concept, valoresPosiblesPorCelda is the 3 dimensional array that represents all value possibilities given a coordinate of the sudoku. And celdasPosiblesPorBloqueYValor is the 3 dimensional array that represents all possible squares given a block and a value.
 
---Recusrion and Backtracking--
+--Recursion and Backtracking--
 
 Resolutor uses 4 cases to implement a recursive tree to execute backtracking over the sudoku:
 +first case is no squares empty at all, so the sudoku's board state of values is returned as the solution.
@@ -46,5 +46,5 @@ Also, type cases can be implemented too by declaring distinct functor function f
 So, it is actually able to declare an overloading for those 4 cases i.e.:
 +vector<int>
 +vector<pair<int,int>>
-+list<int>
-+lis<pair<int,int>>
++list<char>
++lis<pair<int,float>>
