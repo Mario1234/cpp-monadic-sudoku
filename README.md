@@ -45,7 +45,9 @@ Resolutor uses 4 cases to implement a recursive tree to execute backtracking ove
 
 
 The way in which Resolutor does the try of fixing a square is implemented in function reducePosiblesCasilla. 
+
 In the first step, this function iterate over the row in function reducePosiblesOtrasCeldas3d using lambda expressions, then iterate over the column in function reducePosiblesOtrasCeldas2d using lambda again and selects all coordinates which are in the same row or column as the fixing square. However, it only removes the fixed value from the list of possible values of each of those selected coordinates in reducePosiblesOtrasCeldas1d using lambda too.
+
 Secondly, it checks every square of the list of posible squares of celdasPosiblesPorBloqueYValor using the fixed square's block and fixed value to index in, and then it removes the square only if is distinct to the fixed one. This is implemented in the function marcarEnBloqueValorPuesto using a lambda expression.
 
 
