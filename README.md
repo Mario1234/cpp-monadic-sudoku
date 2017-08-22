@@ -55,7 +55,7 @@ Secondly, it checks every square of the list of posible squares of celdasPosible
 
 
 Lambda expressions above named are >>= operand overloading that implements a functor template of the monad structure called vectormonada.
-vectormonada is an implementation of monad template monada which is just the general purpose monad template with its unit method (template bind).
+vectormonada is an implementation (template bind) of monad template monada which is just the general purpose monad template with its unit method.
 Furthermore, vectormonada declare its functor method as a >>= operand overloading where it takes a vector and the lambda returned object as parameters of it and executes an iteration over that vector to apply the lambda expression and, also append each lambda result.
 i.e.: That's why function reducePosiblesOtrasCeldas1d in Resolutor can iterate over posibles1d vector parameter applying a check over each element of it and creating unitary vectors from this element using the functor appending.
 
