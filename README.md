@@ -65,11 +65,11 @@ This complex structure of templates and lambdas also offers the possibility of d
 Also, type cases can be implemented too by declaring distinct functor function for each distinct type a vector can hold inside.
 So, it is actually able to declare an overloading for those 4 cases i.e.:
 
-+vector <int>
++"vector<int>"
 
 +vector<pair<int,int>>
 
-+list <char>
++"list<char>"
 
 +lis<pair<int,float>>
 
