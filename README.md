@@ -1,6 +1,12 @@
 # cpp-monadic-sudoku
 
-This Application solves the sudoku represented in sudoText2.txt file(0 means empty tile). To try it, download it and install Code::Blocks with TDM compiler, create new project and paste all this project's files. Main code file to execute is pruebas.cpp
+This Application solves the sudoku represented in sudoText2.txt file(0 means empty tile). To try it, download it and install Code::Blocks with TDM compiler, create new project and paste all this project's files.
+
+Any time you want to compile some c++ code with lambda expressions you will need to use latest c++ standar compiler 14.
+So, go to settings->Compiler...->Compiler Settings
+Click the check box of "Have g++ follow the C++14 ISO C++ language standard" option.
+
+Main code file to execute is pruebas.cpp
 
 
 
